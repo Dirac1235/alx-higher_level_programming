@@ -6,8 +6,8 @@ class Rectangle:
     """Represent a rectangle.
 
     Attributes:
-        number_of_instances (int): The number of Rectangle instances.
-        print_symbol (any): The symbol used for string representation.
+        number_of_instances (int): number of Rectangle instances.
+        print_symbol (any): symbol used for string representation.
     """
 
     number_of_instances = 0
@@ -26,7 +26,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get/set the width of the Rectangle."""
+        """Get/set width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -51,18 +51,18 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return the area of the Rectangle."""
+        """Return area of the Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """Return the perimeter of the Rectangle."""
+        """Return perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Return the Rectangle with the greater area.
+        """Return Rectangle with the greater area.
 
         Args:
             rect_1 (Rectangle): The first Rectangle.
@@ -83,7 +83,7 @@ class Rectangle:
         """Return a new Rectangle with width and height equal to size.
 
         Args:
-            size (int): The width and height of the new Rectangle.
+            size (int): width and height of the new Rectangle.
         """
         return (cls(size, size))
 
