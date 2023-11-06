@@ -1,0 +1,23 @@
+=======================
+How to use 1-my_list.py
+=======================
+
+it sorts given list which is an object of class which inherits list class
+
+Usage
+=====
+print_sorted(...) sorts the MyList object given to it in acending order
+
+>>> MyList = __import__('1-my_list').MyList
+>>> >>> list1 = MyList()
+>>> list1.append(1)
+>>> list1.append(4)
+>>> list1.append(2)
+>>> list1.append(3)
+>>> list1.append(5)
+>>> print(list1)
+[1, 4, 2, 3, 5]
+>>> list1.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(list1)
+[1, 4, 2, 3, 5]
