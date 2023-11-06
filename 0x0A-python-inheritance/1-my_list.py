@@ -9,5 +9,8 @@ class MyList(list):
     Returns:
         None
     """
+
+
     def print_sorted(self):
+        """it prints sorted list"""
         print(sorted(self))

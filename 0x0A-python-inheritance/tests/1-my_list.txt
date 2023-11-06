@@ -21,3 +21,84 @@ print_sorted(...) sorts the MyList object given to it in acending order
 [1, 2, 3, 4, 5]
 >>> print(list1)
 [1, 4, 2, 3, 5]
+
+________________________________________
+
+case 2: not defined object
+
+>>> MyList = __import__('1-my_list').MyList
+>>> list2.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'list2' is not defined
+>>>
+
+__________________________________________
+
+case 3: passed a list
+
+>>> a = [1, 9, 4]
+>>> list = MyList(a)
+>>> list.print_sorted()
+[1, 4, 9]
+>>>
+
+_________________________________________
+
+case 4: empty list
+
+>>> b = []
+>>> my_list = MyList(b)
+>>> my_list.print_sorted()
+[]
+>>>
+
+________________________________________
+
+case 5: unique number
+
+>>> list3 = MyList()
+>>> list3.append(1)
+>>> list3.print_sorted()
+[1]
+>>> print(list3)
+[1]
+>>>
+
+_____________________________________
+
+case 6: same number
+
+>>> list3 = MyList()
+>>> list3.append(1)
+>>> list3.append(1)
+>>> list3.append(1)
+>>> list3.append(1)
+>>> list3.print_sorted()
+[1, 1, 1, 1]
+>>>
+
+________________________________________
+
+case 7: parent object
+>>> list5 = [1, 2, 3]
+>>> list5.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'print_sorted'
+>>>
+
+________________________________________
+
+case 8: negative numbers
+
+>>> MyList = __import__('1-my_list').MyList
+>>> list5 = MyList()
+>>> list5.append(5)
+>>> list5.append(1)
+>>> list5.append(-1)
+>>> list5.append(51)
+>>> list5.append(-5)
+>>> list5.print_sorted()
+[-5, -1, 1, 5, 51]
+>>>
