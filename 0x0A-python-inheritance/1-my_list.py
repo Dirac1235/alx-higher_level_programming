@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" class that inherits from list class """
+
+
 class MyList(list):
     """
     Sorts the list in ascending order and prints it.
@@ -9,7 +12,6 @@ class MyList(list):
     Returns:
         None
     """
-
 
     def print_sorted(self):
         """it prints sorted list"""
