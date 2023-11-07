@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" contains function that converts object to json string"""
+"""Defines a JSON file writing function."""
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """converts object to json string and saves to file"""
-    json.dump(my_obj, filename)
+    """Write an object to a text file using JSON representation."""
+    with open(filename, "w") as file:
+        json.dump(my_obj, file)
