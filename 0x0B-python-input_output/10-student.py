@@ -17,6 +17,15 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attr=[]):
         """Get a dictionary representation of the Student."""
-        return self.__dict__
+        diction = self.__dict__
+        if attr == []:
+            return diction
+
+        def my_filter_fun(pair):
+            """used to filter the dictionary"""
+            keys, value = pair
+            return keys in attr
+        diction = dict(filter(my_filter_fun, diction.items()))
+        return diction
