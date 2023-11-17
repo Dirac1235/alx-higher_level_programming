@@ -10,9 +10,9 @@ class Base(object):
 
     def __init__(self, id=None):
         """ initalizes id"""
-        if id != None:
+        if id is not None:
             self.id = id
         else:
-            Base.id+=1
+            Base.id += 1
 
-    __nb_objects+=1
+    __nb_objects += 1
